@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Expenses - Road Tax & Insurance</title>
+    
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    
+    <style>
+        .xBold{font-family:Arial;font-size:16px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold3{font-family:'Times New Roman';font-size:20px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold2{font-family:Arial;font-size:12px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xNormal{font-family:Arial;font-size:11px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xNormal2{font-family:'Times New Roman';font-size:14px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xSmall2{font-family:'Times New Roman';font-size:12px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .printout2{FONT-WEIGHT:bold;FONT-SIZE:8px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        .printout{FONT-SIZE:12px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        @page{size: A4 landscape; margin-top:0.25in;margin-bottom:0.25in;margin-right:0.25in;margin-left:0.25in;mso-header-margin:.51in;mso-footer-margin:.51in;}
+    </style>
+</head>
+<body>
+<table border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td>
+    <!-- Header Section -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px;">
+        <tr>
+            <td style="width: 70%; vertical-align: top;">
+                <div class="xBold2">EXPENSES OF VEHICLE FOR ROAD TAX & INSURANCES</div>
+                <div class="xBold2">FOR : _______________</div>
+                <div class="xBold2">AS AT @ ________________</div>
+            </td>
+            <td style="width: 30%; text-align: right; vertical-align: top;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="text-align: right; vertical-align: top;">
+                            <div class="xBold2">Ref No : _________</div>
+                            <div class="xBold2">Date : _________</div>
+                        </td>
+                        <td style="text-align: right; vertical-align: middle; padding-left: 20px;">
+                            <a href="#">
+                                <img src="lOGO.png" alt="asturi" style="height: 30px;">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Table -->
+    <table style="width: 100%; border-collapse: collapse; border: 2px solid #000;" cellpadding="4" cellspacing="0">
+        <!-- Header Row -->
+        <tr style="background-color: #f8f8f8;">
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 4%; padding: 8px; vertical-align: middle;">NO</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 10%; padding: 8px; vertical-align: middle;">NO KERETA</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 8%; padding: 8px; vertical-align: middle;">JENIS</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 10%; padding: 8px; vertical-align: middle;">TARIKH RE-NEW ROAD TAX</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 10%; padding: 8px; vertical-align: middle;">ROAD TAX EXPIRY</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 10%; padding: 8px; vertical-align: middle;">RM COST (RM)</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 10%; padding: 8px; vertical-align: middle;">INSURANCE EXPIRY DATE</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 10%; padding: 8px; vertical-align: middle;">RM COST (RM)</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 8%; padding: 8px; vertical-align: middle;">USER</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 20%; padding: 8px; vertical-align: middle;">OTHER</td>
+        </tr>
+        
+        <!-- Data Rows (Empty for filling) -->
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 15px;">&nbsp;</td>
+        </tr>
+    
+        
+
+</td>
+</tr>
+</table>
+</body>
+</html>

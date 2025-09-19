@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Expenses - Financial Statements</title>
+
+        <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    
+    <style>
+        .xBold{font-family:Arial;font-size:16px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold3{font-family:'Times New Roman';font-size:20px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold2{font-family:Arial;font-size:12px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xNormal{font-family:Arial;font-size:11px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xNormal2{font-family:'Times New Roman';font-size:14px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xSmall{font-family:Arial;font-size:9px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .printout2{FONT-WEIGHT:bold;FONT-SIZE:8px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        .printout{FONT-SIZE:12px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        @page{size: A4; margin-top:0.25in;margin-bottom:0.25in;margin-right:0.25in;margin-left:0.25in;}
+    </style>
+</head>
+<body style="margin: 0; padding: 20px; background-color: white; display: flex; justify-content: center; min-height: 100vh;">
+<div style="padding: 20px;">
+<table border="0" width="700" cellpadding="0" cellspacing="0" style="border-collapse: collapse; background-color: white;">
+<tr>
+<td>
+
+    <!-- Note E02 Section -->
+    <div style="margin: 20px 0;">
+        <div class="xBold2" style="margin-bottom: 15px; text-decoration: underline;">E02 : SALARY EXPENSES</div>
+    </div>
+
+    <table style="width: 100%; border-collapse: collapse; background-color: white; border: 1px solid #000;" cellpadding="3" cellspacing="0">
+        
+        <!-- E02-1 Tabung Haji -->
+        <tr>
+            <td style="width: 15%; padding: 8px; vertical-align: middle; text-align: center; border-top: 1px solid #000; border-left: 1px solid #000; border-bottom: 0px; border-right: 1px solid #000;">
+                <span class="xNormal" style="white-space: nowrap;">E02-1</span>
+            </td>
+            <td style="width: 40%; padding: 8px; vertical-align: middle; text-align: left; border-top: 1px solid #000; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal">Tabung Haji</span>
+            </td>
+            <td style="width: 15%; padding: 8px; vertical-align: middle; text-align: center; border-top: 1px solid #000; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-1-col1">-</span>
+            </td>
+            <td style="width: 15%; padding: 8px; vertical-align: middle; text-align: center; border-top: 1px solid #000; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-1-col2">-</span>
+            </td>
+            <td style="width: 15%; padding: 8px; vertical-align: middle; text-align: center; border-top: 1px solid #000; border-bottom: 0px; border-right: 1px solid #000; border-left: 1px solid #000;">
+                <span class="xNormal" id="e02-1-col3">-</span>
+            </td>
+        </tr>
+        
+        <!-- E02-2 Zakat -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-left: 1px solid #000; border-bottom: 0px; border-right: 1px solid #000;">
+                <span class="xNormal" style="white-space: nowrap;">E02-2</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal">Zakat</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-2-col1">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-2-col2">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-2-col3">-</span>
+            </td>
+        </tr>
+        
+        <!-- E02-3 PCB -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-left: 1px solid #000; border-bottom: 0px; border-right: 1px solid #000;">
+                <span class="xNormal" style="white-space: nowrap;">E02-3</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal">PCB</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-3-col1">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-3-col2">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-3-col3">-</span>
+            </td>
+        </tr>
+        
+        <!-- E02-4 House Rental -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-left: 1px solid #000; border-bottom: 0px; border-right: 1px solid #000;">
+                <span class="xNormal" style="white-space: nowrap;">E02-4</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal">House Rental</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-4-col1">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-4-col2">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-4-col3">-</span>
+            </td>
+        </tr>
+        
+        <!-- E02-5 Foreign worker saving -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-left: 1px solid #000; border-bottom: 0px; border-right: 1px solid #000;">
+                <span class="xNormal" style="white-space: nowrap;">E02-5</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal">Foreign worker saving</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-5-col1">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-5-col2">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" id="e02-5-col3">-</span>
+            </td>
+        </tr>
+        
+        
+        <!-- TOTAL E02 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;"></span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">TOTAL E02</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" id="total-e02-col1">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" id="total-e02-col2">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" id="total-e02-col3">-</span>
+            </td>
+        </tr>
+        
+    </table>
+
+     <br>
+     <br>
+     
+    <!-- GRAND TOTAL Table -->
+    <table style="width: 100%; border-collapse: collapse; background-color: white; border: 1px solid #000; margin-top: 0;" cellpadding="3" cellspacing="0">
+        <!-- GRAND TOTAL E01 + E02 -->
+        <tr>
+            <td style="width: 55%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">GRAND TOTAL E01 + E02</span>
+            </td>
+            <td style="width: 15%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" id="grand-total-col1">-</span>
+            </td>
+            <td style="width: 15%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" id="grand-total-col2">-</span>
+            </td>
+            <td style="width: 15%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" id="grand-total-col3">-</span>
+            </td>
+        </tr>
+    </table>
+
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

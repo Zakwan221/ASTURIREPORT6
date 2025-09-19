@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Invoice Form</title>
+    <style>
+        .xBold{font-family:Arial;font-size:16px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold3{font-family:'Times New Roman';font-size:20px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold2{font-family:Arial;font-size:12px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xNormal{font-family:Arial;font-size:11px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xNormal2{font-family:'Times New Roman';font-size:14px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xSmall2{font-family:'Times New Roman';font-size:12px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .printout2{FONT-WEIGHT:bold;FONT-SIZE:8px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        .printout{FONT-SIZE:12px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        @page{size: A4; margin-top:0.25in;margin-bottom:0.25in;margin-right:0.25in;margin-left:0.25in;mso-header-margin:.51in;mso-footer-margin:.51in;}
+    </style>
+</head>
+<body style="margin: 0; padding: 20px; background-color: white; display: flex; justify-content: center; min-height: 100vh;">
+<div style="padding: 20px; max-width: 800px; width: 100%;">
+
+    <!-- Header Section with TAX INVOICE -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+            <td style="width: 25%; vertical-align: top; padding: 10px;">
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="logo.png" alt="asturi" style="height: 60px; width: auto; margin-right: 15px;">
+                </div>
+                <div style="border: 2px solid #000; padding: 10px; text-align: center; margin-top: 40px;">
+                    <div class="xBold">TAX INVOICE</div>
+                </div>
+            </td>
+            <td style="width: 30%; text-align: left; vertical-align: top; padding: 20px;">
+            </td>
+            <td style="width: 45%; text-align: right; vertical-align: top; padding: 10px;">
+                <div style="background-color: #000000; color: white; padding: 3px 8px; font-size: 13.5px; font-weight: bold; margin-bottom: 10px; display: inline-block;">
+                    ASTI/FIN/INVOICE/2025
+                </div>
+                <div class="xNormal" style="margin-bottom: 3px;">Lot 714-A, Jalan Gebeng 16,</div>
+                <div class="xNormal" style="margin-bottom: 3px;">Gebeng Industrial Estate,</div>
+                <div class="xNormal" style="margin-bottom: 3px;">26080 Kuantan,</div>
+                <div class="xNormal" style="margin-bottom: 3px;">Pahang Darul Makmur.</div>
+                <div class="xNormal" style="margin-bottom: 3px;">Tel: 09-5833 808</div>
+                <div class="xNormal" style="margin-bottom: 3px;">Fax: 09-5833 828</div>
+                <div class="xNormal" style="margin-bottom: 10px;">Email: finance@asturi.com.my</div>
+                <div class="xBold2">No. SST : C10-2507-32000028</div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Invoice Details and Customer Details Section -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;" cellpadding="5" cellspacing="0">
+        <tr>
+            <td style="width: 65%; vertical-align: top; padding: 5px;">
+                <!-- Customer Details -->
+                <table style="width: 100%; border-collapse: collapse;" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <td class="xBold2" style="width: 20%; padding: 5px;">Invoice to</td>
+                        <td class="xBold2" style="width: 5%; padding: 5px;">:</td>
+                        <td class="xNormal" style="width: 75%; padding: 5px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="xBold2" style="padding: 5px;">Address</td>
+                        <td class="xBold2" style="padding: 5px;">:</td>
+                        <td class="xNormal" style="padding: 5px; height: 60px; vertical-align: top;"></td>
+                    </tr>
+                    <tr>
+                        <td class="xBold2" style="padding: 5px;">Attn</td>
+                        <td class="xBold2" style="padding: 5px;">:</td>
+                        <td class="xNormal" style="padding: 5px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="xBold2" style="padding: 5px;">Tel</td>
+                        <td class="xBold2" style="padding: 5px;">:</td>
+                        <td class="xNormal" style="padding: 5px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="xBold2" style="padding: 5px;">No. SST</td>
+                        <td class="xBold2" style="padding: 5px;">:</td>
+                        <td class="xNormal" style="padding: 5px;"></td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 35%; vertical-align: top; padding: 5px;">
+                <!-- Invoice Details -->
+                <div style="float: right; width: 175px;">
+                    <table style="width: 100%; border-collapse: collapse;" cellpadding="5" cellspacing="0">
+                        <tr>
+                            <td class="xBold2" style="border: 1px solid #000; padding: 5px; width: 40%;">Invoice No.</td>
+                            <td class="xNormal" style="border: 1px solid #000; padding: 5px;"></td>
+                        </tr>
+                        <tr>
+                            <td class="xBold2" style="border: 1px solid #000; padding: 5px;">Date</td>
+                            <td class="xNormal" style="border: 1px solid #000; padding: 5px;"></td>
+                        </tr>
+                        <tr>
+                            <td class="xBold2" style="border: 1px solid #000; padding: 5px;">Terms</td>
+                            <td class="xNormal" style="border: 1px solid #000; padding: 5px;"></td>
+                        </tr>
+                        <tr>
+                            <td class="xBold2" style="border: 1px solid #000; padding: 5px;">Reference</td>
+                            <td class="xNormal" style="border: 1px solid #000; padding: 5px;"></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Invoice Table -->
+    <table style="width: 100%; border-collapse: collapse; border: 2px solid #000; margin-bottom: 0;" cellpadding="8" cellspacing="0">
+        <!-- Header Row -->
+        <tr style="height: 40px;">
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 15%; padding: 8px; vertical-align: middle;">Item No.</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 60%; padding: 8px; vertical-align: middle;">Particulars</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 25%; padding: 8px; vertical-align: middle;">Amount<br>(RM)</td>
+        </tr>
+        
+        <!-- Data Rows -->
+        <tr style="height: 40px;">
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px; text-align: center;">1.0</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+        
+        <!-- Large empty space for additional items -->
+        <tr style="height: 200px;">
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px; vertical-align: top;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px; vertical-align: top;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px; vertical-align: top;"></td>
+        </tr>
+    </table>
+
+    <!-- Totals Section -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+        <tr>
+            <td style="width: 15%; padding: 5px; text-align: left; vertical-align: top;">
+                <div class="xBold2" style="margin-bottom: 5px;">Ringgit Malaysia</div>
+            </td>
+            <td style="width: 59.5%; padding: 5px; text-align: right; vertical-align: top;">
+                <table style="width: 100%; border-collapse: collapse;" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="xNormal" style="padding: 5px;"></td>
+                        <td class="xBold2" style="text-align: right; padding: 5px;">Sub Total</td>
+                    </tr>
+                    <tr>
+                        <td class="xNormal" style="padding: 5px;"></td>
+                        <td class="xBold2" style="text-align: right; padding: 5px;">Service Tax 6%</td>
+                    </tr>
+                    <tr>
+                        <td class="xNormal" style="padding: 5px;"></td>
+                        <td class="xBold2" style="text-align: right; padding: 5px;">Total</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 25%; padding: 0; vertical-align: top;">
+                <table style="width: 100%; border-collapse: collapse;" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="xNormal" style="border: 1px solid #000; padding: 3px; text-align: center; height: 20px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="xNormal" style="border: 1px solid #000; padding: 3px; text-align: center; height: 20px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="xNormal" style="border: 2px solid #000; padding: 3px; text-align: center; height: 20px; font-weight: bold;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Footer Section -->
+    <table style="width: 100%; border-collapse: collapse; margin-top: 40px;">
+        <tr>
+            <td style="width: 75%; vertical-align: top; padding: 10px;">
+                <div class="xBold2" style="margin-bottom: 10px; text-decoration: underline;">Please make payment to :</div>
+                <div class="xNormal" style="margin-bottom: 3px;">Bank name : Asturi Resources Sdn Bhd</div>
+                <div class="xNormal" style="margin-bottom: 3px;">Bank name : Public Bank Berhad</div>
+                <div class="xNormal" style="margin-bottom: 3px;">Acc No. : 2060-1200-6923-8</div>
+            </td>
+            <td style="width: 25%; text-align: center; vertical-align: bottom; padding: 10px;">
+                <div class="xBold2" style="margin-bottom: 5px;">For Asturi Resources Sdn Bhd</div>
+                <div style="border-bottom: 1px solid #000; width: 100%; margin: 40px auto;"></div>
+                <div class="xNormal">Authorised Signatory</div>
+            </td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

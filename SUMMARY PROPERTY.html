@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Rental Summary</title>
+
+       <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    
+    <style>
+        .xBold{font-family:Arial;font-size:16px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold3{font-family:'Times New Roman';font-size:20px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold2{font-family:Arial;font-size:12px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xNormal{font-family:Arial;font-size:11px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xNormal2{font-family:'Times New Roman';font-size:14px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xSmall2{font-family:'Times New Roman';font-size:12px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .printout2{FONT-WEIGHT:bold;FONT-SIZE:8px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        .printout{FONT-SIZE:12px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        @page{size: A4; margin-top:0.25in;margin-bottom:0.25in;margin-right:0.25in;margin-left:0.25in;mso-header-margin:.51in;mso-footer-margin:.51in;}
+    </style>
+</head>
+<body style="background-color: #ffffff;">
+<table border="0" width="900" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; background-color: #ffffcc;">
+<tr>
+<td>
+    <!-- Header Section -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; background-color: #ffffcc;">
+        <tr>
+            <td class="xBold2" style="width: 60%; vertical-align: top; padding: 10px;">
+                <div style="height: 28px;"></div>
+                COMPANY : ASTURI RESOURCES SDN BHD<br>
+                <div style="height: 6px;"></div>
+                DATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ____________________
+            </td>
+            <td style="width: 40%; text-align: right; vertical-align: top; padding: 10px;">
+                <div style="text-align: right;">
+                    <div style="display: inline-block; border: 2px solid #000; border-radius: 8px; padding: 4px 12px; margin-bottom: 10px;">
+                        <img src="lOGO.png" alt="asturi" style="height: 22px;">
+                    </div><br>
+                    <span class="xBold2">AST/2025/RENTAL/____/SUMMARY</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Title Section -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; background-color: #ffffcc;">
+        <tr>
+            <td class="xBold" style="padding: 10px; text-decoration: underline;">
+                SUMMARY OF PROPERTY RENTAL<br>
+                FOR THE MONTH OF ____________________
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Table -->
+    <table style="width: 100%; border-collapse: collapse; border: 2px solid #000; background-color: #ffffcc;" cellpadding="8" cellspacing="0">
+        <!-- Header Row -->
+        <tr style="background-color: #ffffcc;">
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 8%; padding: 10px;" rowspan="2">CODE</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 20%; padding: 10px;" rowspan="2">PROPERTY</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 36%; padding: 10px;" colspan="3">MONTHLY</td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 36%; padding: 10px;" colspan="3">CUMULATIVE</td>
+        </tr>
+        <tr style="background-color: #ffffcc; height: 60px;">
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 12%; padding: 8px; position: relative; vertical-align: top;">
+                <div style="height: 28px; display: flex; align-items: center; justify-content: center;">REVENUE</div>
+                <div style="position: absolute; top: 70%; left: 0; right: 0; height: 1px; background: #000; z-index: 1; transform: translateY(-50%);"></div>
+                <div style="position: absolute; bottom: 2px; left: 0; right: 0; text-align: center;">RM</div>
+            </td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 12%; padding: 8px; position: relative; vertical-align: top;">
+                <div style="height: 28px; display: flex; align-items: center; justify-content: center;">COS</div>
+                <div style="position: absolute; top: 70%; left: 0; right: 0; height: 1px; background: #000; z-index: 1; transform: translateY(-50%);"></div>
+                <div style="position: absolute; bottom: 2px; left: 0; right: 0; text-align: center;">RM</div>
+            </td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 12%; padding: 8px; position: relative; vertical-align: top;">
+                <div style="height: 28px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <div>GROSS</div>
+                    <div>PROFIT</div>
+                </div>
+                <div style="position: absolute; top: 70%; left: 0; right: 0; height: 1px; background: #000; z-index: 1; transform: translateY(-50%);"></div>
+                <div style="position: absolute; bottom: 2px; left: 0; right: 0; text-align: center;">RM</div>
+            </td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 12%; padding: 8px; position: relative; vertical-align: top;">
+                <div style="height: 28px; display: flex; align-items: center; justify-content: center;">REVENUE</div>
+                <div style="position: absolute; top: 70%; left: 0; right: 0; height: 1px; background: #000; z-index: 1; transform: translateY(-50%);"></div>
+                <div style="position: absolute; bottom: 2px; left: 0; right: 0; text-align: center;">RM</div>
+            </td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 12%; padding: 8px; position: relative; vertical-align: top;">
+                <div style="height: 28px; display: flex; align-items: center; justify-content: center;">COS</div>
+                <div style="position: absolute; top: 70%; left: 0; right: 0; height: 1px; background: #000; z-index: 1; transform: translateY(-50%);"></div>
+                <div style="position: absolute; bottom: 2px; left: 0; right: 0; text-align: center;">RM</div>
+            </td>
+            <td class="xBold2" style="border: 1px solid #000; text-align: center; width: 12%; padding: 8px; position: relative; vertical-align: top;">
+                <div style="height: 28px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <div>GROSS</div>
+                    <div>PROFIT</div>
+                </div>
+                <div style="position: absolute; top: 70%; left: 0; right: 0; height: 1px; background: #000; z-index: 1; transform: translateY(-50%);"></div>
+                <div style="position: absolute; bottom: 2px; left: 0; right: 0; text-align: center;">RM</div>
+            </td>
+        </tr>
+
+        <!-- Data Rows -->
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R01</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Lot 74-A, Gebeng</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R02</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Lot 3/129, Gebeng</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R03</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Land, Gebeng</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R04</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Bangi</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R05</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Jalan Kuching - Blok 3</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R06</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Jalang Kuching - Blok 3A</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R07</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Short Term Rental</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R08</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Rental of Equipment</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <tr style="background-color: #ffffcc;">
+            <td class="xNormal" style="border: 1px solid #000; text-align: center; padding: 8px;">R09</td>
+            <td class="xNormal" style="border: 1px solid #000; text-align: left; padding: 8px;">Others</td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+            <td class="xNormal" style="border: 1px solid #000; padding: 8px;"></td>
+        </tr>
+
+        <!-- Total Row -->
+        <tr style="background-color: #ffffcc;">
+            <td colspan="2" class="xBold2" style="border: 1px solid #000; text-align: center; padding: 10px;">TOTAL</td>
+            <td class="xBold2" style="border: 1px solid #000; padding: 10px;"></td>
+            <td class="xBold2" style="border: 1px solid #000; padding: 10px;"></td>
+            <td class="xBold2" style="border: 1px solid #000; padding: 10px;"></td>
+            <td class="xBold2" style="border: 1px solid #000; padding: 10px;"></td>
+            <td class="xBold2" style="border: 1px solid #000; padding: 10px;"></td>
+            <td class="xBold2" style="border: 1px solid #000; padding: 10px;"></td>
+        </tr>
+    </table>
+
+</td>
+</tr>
+</table>
+</body>
+</html>

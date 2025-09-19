@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E04 Expenses - Financial Statements</title>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+
+    <style>
+        .xBold{font-family:Arial;font-size:16px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold3{font-family:'Times New Roman';font-size:20px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold2{font-family:Arial;font-size:12px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xNormal{font-family:Arial;font-size:11px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xNormal2{font-family:'Times New Roman';font-size:14px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xSmall{font-family:Arial;font-size:9px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .printout2{FONT-WEIGHT:bold;FONT-SIZE:8px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        .printout{FONT-SIZE:12px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        @page{size: A4; margin-top:0.25in;margin-bottom:0.25in;margin-right:0.25in;margin-left:0.25in;}
+    </style>
+</head>
+<body style="margin: 0; padding: 20px; background-color: white; display: flex; justify-content: center; min-height: 100vh;">
+<div style="padding: 20px;">
+<table border="0" width="700" cellpadding="0" cellspacing="0" style="border-collapse: collapse; background-color: white;">
+<tr>
+<td>
+
+    <!-- Expenses Table -->
+    <table style="width: 100%; border-collapse: collapse; background-color: white; border: 1px solid #000;" cellpadding="3" cellspacing="0">
+        
+        <!-- Header Row -->
+        <tr>
+            <td rowspan="2" style="width: 12%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">No code.</span>
+            </td>
+            <td rowspan="2" style="width: 40%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">Description</span>
+            </td>
+            <td colspan="3" style="width: 48%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xBold2">E : EXPENSES</span>
+            </td>
+        </tr>
+        
+        <!-- Sub Headers Row -->
+        <tr>
+            <td style="width: 16%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">Monthly<br>RM</span>
+            </td>
+            <td style="width: 16%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">Cumulative<br>RM</span>
+            </td>
+            <td style="width: 16%; padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">Note<br>RM</span>
+            </td>
+        </tr>
+        
+        <!-- E04-1 Main Row -->
+        <tr>
+            <td rowspan="15" style="padding: 8px; vertical-align: top; text-align: center; border-top: 0px; border-bottom: 1px solid #000; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal">E04-1</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">Building - Lot 74-A, Office + Factory 1-13</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="e04-1-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="e04-1-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="e04-1-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Building - Lot 74-A, Office -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Building - Lot 74-A, Office</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="office-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="office-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="office-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 1 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 1</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory1-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory1-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory1-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 2 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 2</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory2-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory2-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory2-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 3 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 3</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory3-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory3-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory3-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 4 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 4</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory4-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory4-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory4-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 5 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 5</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory5-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory5-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory5-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 6 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 6</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory6-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory6-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory6-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 7 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 7</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory7-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory7-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory7-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 8 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 8</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory8-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory8-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory8-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 9 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 9</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory9-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory9-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory9-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 10 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 10</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory10-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory10-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory10-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 11 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 11</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory11-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory11-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory11-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 12 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 12</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory12-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory12-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 0px; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory12-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- Factory 13 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: left; border-top: 0px; border-bottom: 1px solid #000; border-left: 1px solid #000; border-right: 1px solid #000; padding-left: 25px;">
+                <span class="xNormal">Factory 13</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 1px solid #000; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory13-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 1px solid #000; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory13-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border-top: 0px; border-bottom: 1px solid #000; border-left: 1px solid #000; border-right: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="factory13-note">-</span>
+            </td>
+        </tr>
+        
+        <!-- TOTAL E04-01 -->
+        <tr>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;"></span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000;">
+                <span class="xNormal" style="font-weight: bold;">TOTAL E04-01</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="total-e04-01-monthly">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="total-e04-01-cumulative">-</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; text-align: center; border: 1px solid #000; font-family: Arial; font-size: 11px; color: #000000; min-height: 16px;">
+                <span id="total-e04-01-note">-</span>
+            </td>
+        </tr>
+        
+    </table>
+
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

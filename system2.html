@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System2 - Assets Management</title>
+
+    <!-- <link rel="stylesheet" href="media.css"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background: #ffffff;
+            border-right: 1px solid #e1e5e9;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar.collapsed {
+            width: 60px;
+        }
+        
+        .sidebar.collapsed .sidebar-title,
+        .sidebar.collapsed .reports-section {
+            display: none;
+        }
+        
+        .sidebar.collapsed .sidebar-title-row {
+            justify-content: center !important;
+        }
+        
+        .sidebar.collapsed .sidebar-burger {
+            margin-right: 0 !important;
+        }
+        
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid #e1e5e9;
+            position: relative;
+        }
+        
+        .sidebar-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            transition: color 0.2s;
+            position: relative;
+        }
+        
+        .sidebar-title:hover {
+            color: #4285f4;
+        }
+        
+        .sidebar-subtitle {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+
+        /* System Navigation Sidebar */
+        .system-sidebar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .system-sidebar.show {
+            max-height: 300px;
+        }
+
+        .system-menu-item {
+            padding: 12px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 14px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+
+        .system-menu-item:hover {
+            background: #f8f9fa;
+        }
+
+        .system-menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-icon {
+            margin-right: 12px;
+            font-size: 16px;
+        }
+        
+        .reports-section {
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .report-category {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .category-header {
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.2s;
+        }
+        
+        .category-header:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .category-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .expand-icon {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+        
+        .expand-icon img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .category-header.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+        
+        .report-items {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #fafbfc;
+        }
+        
+        .report-items.show {
+            max-height: 500px;
+        }
+        
+        .report-item {
+            padding: 12px 40px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #5a6c7d;
+            border-bottom: 1px solid #eef1f4;
+            transition: all 0.2s;
+        }
+        
+        .report-item:hover {
+            background-color: #e8f4fd;
+            color: #4285f4;
+            padding-left: 45px;
+        }
+        
+        .report-item.active {
+            background-color: #4285f4;
+            color: white;
+        }
+
+        .report-item:last-child {
+            border-bottom: none;
+        }
+        
+        /* Sub-report items */
+        .sub-report-item {
+            padding: 10px 60px;
+            cursor: pointer;
+            font-size: 12px;
+            color: #7f8c8d;
+            border-bottom: 1px solid #eef1f4;
+            transition: all 0.2s;
+        }
+
+        .sub-report-item:hover {
+            background-color: #e8f4fd;
+            color: #4285f4;
+            padding-left: 65px;
+        }
+
+        .sub-report-item.active {
+            background-color: #4285f4;
+            color: white;
+        }
+        
+        .sub-report-item:last-child {
+            border-bottom: none;
+        }
+        
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+            overflow: hidden;
+        }
+        
+        /* Content Header */
+        .content-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e1e5e9;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+        
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .header-btn {
+            background: none;
+            border: none;
+            padding: 4px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .header-btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .content-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+        
+        .content-subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 4px;
+        }
+        
+        
+        /* Content Body */
+        .content-body {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+        
+        /* No Report View */
+        .no-report-view {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            color: #7f8c8d;
+        }
+        
+        .no-report-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        .no-report-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .no-report-subtitle {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .get-started-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        
+        .get-started-btn:hover {
+            background: #3367d6;
+        }
+        
+        /* Report Content */
+        .report-content {
+            padding: 20px;
+            max-width: 100%;
+            overflow-y: auto;
+            display: none;
+            flex: 1;
+            background: #f8f9fa;
+        }
+        
+        .report-content.active {
+            display: block;
+        }
+        
+        .report-content iframe {
+            width: 100%;
+            min-height: calc(100vh - 200px);
+            border: none;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .report-navigation {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e1e5e9;
+        }
+
+        .nav-links {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .nav-link {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .nav-separator {
+            margin: 0 10px;
+            color: #ccc;
+        }
+
+
+        /* Iframe Container */
+        .iframe-container {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: calc(100vh - 160px);
+            border: none;
+            display: block;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* System sidebar overlay for mobile */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        .sidebar-burger {
+            font-size: 36px !important;
+            color: #000000 !important;
+            width: 20px !important;
+            height: 18px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-right: 0px !important;
+            position: relative !important;
+            right: 0px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay" onclick="hideSystemSidebar()"></div>
+    
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title-row">
+                <span class="sidebar-title" onclick="navigateToIndex()" style="cursor: pointer; flex: 1;">System2</span>
+                <span class="sidebar-burger" onclick="toggleSystemSidebar()">≡</span>
+            </div>
+            
+            
+            <!-- System Navigation Sidebar -->
+            <div class="system-sidebar" id="systemSidebar">
+                <div class="system-menu-item" onclick="navigateToIndex()">
+                    <span class="menu-icon">⚡</span>
+                    Back to Main System
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="reports-section">
+            <!-- Asset Management Reports -->
+            <div class="report-category">
+                <div class="category-header" onclick="toggleCategory('asset-listing')">
+                    <div class="category-title">ASSET LISTING</div>
+                    <span class="expand-icon"><img src="downarrow.png" alt="Expand"></span>
+                    </div>
+                <div class="report-items" id="asset-listing">
+                    <div class="report-item" onclick="openExternalReport('LIST OF ASSET .html', 'List of Asset')">LIST OF ASSET</div>
+                    <div class="report-item" onclick="openExternalReport('ASSET LISTING.html', 'Asset Listing Details')">ASSET LISTING DETAILS</div>
+                </div>
+                    </div>
+                    
+            
+            <div class="report-category">
+                <div class="category-header" onclick="toggleCategory('vehicle-maintenance')">
+                    <div class="category-title">VEHICLE MAINTENANCE</div>
+                    <span class="expand-icon"><img src="downarrow.png" alt="Expand"></span>
+                </div>
+                <div class="report-items" id="vehicle-maintenance">
+                    <div class="report-item" onclick="openExternalReport('ASTURI RESOURCE .html', 'Asturi Resources - Maintenance')">ASTURI RESOURCES</div>
+                    <div class="report-item" onclick="openExternalReport('STURI TRUCK AND CRANE MAINTENANCE.html', 'Asturi Truck & Crane - Maintenance')">ASTURI TRUCK & CRANE</div>
+                    <div class="report-item" onclick="openExternalReport('OTHER SERVICE.html', 'Personal Vehicles - Maintenance')">PERSONAL VEHICLES</div>
+                </div>
+            </div>
+
+            <div class="report-category">
+                <div class="category-header" onclick="toggleCategory('vehicle-roadtax-insurance')">
+                    <div class="category-title">VEHICLE ROAD TAX & INSURANCE</div>
+                    <span class="expand-icon"><img src="downarrow.png" alt="Expand"></span>
+                </div>
+                <div class="report-items" id="vehicle-roadtax-insurance">
+                    <div class="report-item" onclick="openExternalReport('ROAD TAX ASPURI RESOURCE.html', 'Asturi Resources - Road Tax & Insurance')">ASTURI RESOURCES</div>
+                    <div class="report-item" onclick="openExternalReport('TRUCK AND CRANE ASTURI ROAD TAX.html', 'Asturi Truck & Crane - Road Tax & Insurance')">ASTURI TRUCK & CRANE</div>
+                    <div class="report-item" onclick="openExternalReport('ROAD TAX OTHER.html', 'Personal Vehicles - Road Tax & Insurance')">PERSONAL VEHICLES</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="content-header">
+            <div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="content-title">System2 Dashboard</div>
+                    <span style="font-size: 14px; color: #666; cursor: pointer; padding: 2px 6px; border-radius: 3px; transition: background 0.2s;" onclick="toggleMainSearch()" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background=''">Search</span>
+                    <img id="searchToggleArrow" src="closearrow.png" alt="Toggle Search" style="width: 16px; height: 16px; cursor: pointer;" onclick="toggleMainSearch()">
+                </div>
+                <div class="content-subtitle">Assets Management System</div>
+            </div>
+            <div class="header-buttons" style="display: flex; align-items: center; gap: 4px;">
+                <button class="header-btn print-btn" onclick="printReport()" style="display: inline-flex; align-items: center; justify-content: center; background: none; border: none; padding: 4px; width: 32px; height: 32px;">
+                    <img src="print.png" alt="Print" style="width: 24px; height: 24px;">
+                </button>
+                <button class="header-btn" title="Export PDF" style="display: inline-flex; align-items: center; justify-content: center; background: none; border: none; padding: 4px; width: 32px; height: 32px;">
+                    <img src="pdf.png" alt="Export PDF" style="width: 20px; height: 24px;">
+                </button>
+                <button class="header-btn" title="Export XLS" style="display: inline-flex; align-items: center; justify-content: center; background: none; border: none; padding: 4px; width: 32px; height: 32px;">
+                    <img src="xls.png" alt="Export XLS" style="width: 20px; height: 24px;">
+                </button>
+                <button class="filter-btn" onclick="showFilters()" style="padding: 6px 12px; margin-left: 8px; height: 32px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px; cursor: pointer;">🔍 Filter</button>
+            </div>
+        </div>
+        
+        <!-- Search Bar (hidden by default) -->
+        <div id="searchBar" style="display: none; background: #f8f9fa; border-bottom: 1px solid #e1e5e9; padding: 15px 30px;">
+            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <!-- From Date -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="font-size: 12px; color: #666; font-weight: 400;">From</label>
+                    <input type="date" id="dateFrom" style="padding: 6px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; background: white;" value="2025-09-01">
+                </div>
+                
+                <!-- To Date -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="font-size: 12px; color: #666; font-weight: 400;">To</label>
+                    <input type="date" id="dateTo" style="padding: 6px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; background: white;" value="2025-09-18">
+                </div>
+                
+                <!-- Show Code Filter -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="font-size: 12px; color: #666; font-weight: 400;">Show Code:</label>
+                    <select id="showCodeFilter" style="padding: 6px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; background: white; min-width: 150px;">
+                        <option value="all">Show All</option>
+                        <option value="with-values" selected>Show only with values</option>
+                        <option value="without-values">Show only without values</option>
+                    </select>
+                </div>
+                
+                <!-- Search Button -->
+                <button onclick="applySearchFilters()" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; font-size: 12px; font-weight: 500; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#218838'" onmouseout="this.style.background='#28a745'">Search</button>
+            </div>
+        </div>
+            
+        
+        <div class="content-body" id="no-report-view">
+            <div class="no-report-view">
+                <div class="no-report-icon">📊</div>
+                <h2 class="no-report-title">Welcome to System2</h2>
+                <p class="no-report-subtitle">Select a report from the sidebar to begin your asset management tasks</p>
+                <button class="get-started-btn" onclick="toggleCategory('asset-listing')">Get Started</button>
+            </div>
+        </div>
+        
+        
+        <!-- Iframe Container for External Reports -->
+        <div class="report-content" id="iframe-content">
+            <!-- Dynamic iframe content will be inserted here -->
+        </div>
+    </div>
+    
+    <script>
+        // Navigation Functions
+        function navigateToIndex() {
+            window.location.href = 'index.html';
+        }
+
+        // Sidebar Collapse Functions
+        function toggleSystemSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            
+            if (sidebar.classList.contains('collapsed')) {
+                sidebar.classList.remove('collapsed');
+            } else {
+                sidebar.classList.add('collapsed');
+            }
+        }
+        
+        function hideSystemSidebar() {
+            const systemSidebar = document.getElementById('systemSidebar');
+            const overlay = document.getElementById('overlay');
+            systemSidebar.classList.remove('show');
+            overlay.classList.remove('show');
+        }
+
+        // Main search functionality for the header
+        function toggleMainSearch() {
+            const searchBar = document.getElementById('searchBar');
+            const searchToggleArrow = document.getElementById('searchToggleArrow');
+            
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'block';
+                searchToggleArrow.src = 'openarrow.png';
+            } else {
+                searchBar.style.display = 'none';
+                searchToggleArrow.src = 'closearrow.png';
+            }
+        }
+
+        function applySearchFilters() {
+            const dateFrom = document.getElementById('dateFrom').value;
+            const dateTo = document.getElementById('dateTo').value;
+            const showCodeFilter = document.getElementById('showCodeFilter').value;
+            
+            // Get current report title
+            const currentTitle = document.querySelector('.content-title').textContent;
+            
+            // Show alert with selected filters (you can replace this with actual filtering logic)
+            alert(`Search Filters Applied:\n\nReport: ${currentTitle}\nFrom: ${dateFrom}\nTo: ${dateTo}\nShow Code: ${showCodeFilter}\n\nThis would filter the report data based on your criteria.`);
+            
+            // Here you would implement the actual filtering logic for your reports
+            // For example, you could:
+            // 1. Send the filters to a backend API
+            // 2. Filter the iframe content based on the criteria
+            // 3. Reload the report with new parameters
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+
+        function toggleCategory(categoryId) {
+            const categoryItems = document.getElementById(categoryId);
+            const categoryHeader = categoryItems.previousElementSibling;
+            
+            // Close other categories
+            const allCategories = document.querySelectorAll('.report-items');
+            const allHeaders = document.querySelectorAll('.category-header');
+            
+            allCategories.forEach(category => {
+                if (category.id !== categoryId) {
+                    category.classList.remove('show');
+                }
+            });
+            
+            allHeaders.forEach(header => {
+                if (header !== categoryHeader) {
+                    header.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle current category
+            categoryItems.classList.toggle('show');
+            categoryHeader.classList.toggle('expanded');
+        }
+
+        function showReport(reportId) {
+            // Hide no report view
+            document.getElementById('no-report-view').style.display = 'none';
+            
+            // Hide all report content
+            const allReports = document.querySelectorAll('.report-content');
+            allReports.forEach(report => report.classList.remove('active'));
+            
+            // Show selected report
+            const selectedReport = document.getElementById(reportId);
+            if (selectedReport) {
+                selectedReport.classList.add('active');
+            }
+        }
+        
+        function showDashboard() {
+            // Hide all report content
+            const allReports = document.querySelectorAll('.report-content');
+            allReports.forEach(report => report.classList.remove('active'));
+            
+            // Show dashboard
+            document.getElementById('no-report-view').style.display = 'block';
+            
+            // Update header
+            document.querySelector('.content-title').textContent = 'System2 Dashboard';
+            document.querySelector('.content-subtitle').textContent = 'Assets Management System';
+            
+            // Remove active state from all items
+            const allItems = document.querySelectorAll('.report-item, .sub-report-item');
+            allItems.forEach(item => item.classList.remove('active'));
+            
+            // Hide print button
+            const printBtn = document.querySelector('.print-btn');
+            if (printBtn) {
+                printBtn.style.display = 'none';
+            }
+        }
+        
+        // Function for opening external reports
+        function openExternalReport(filename, reportTitle) {
+            // Hide system sidebar if open
+            hideSystemSidebar();
+            
+            // Hide no report view
+            document.getElementById('no-report-view').style.display = 'none';
+            
+            // Hide all report content
+            const allReports = document.querySelectorAll('.report-content');
+            allReports.forEach(report => report.classList.remove('active'));
+            
+            // Update active state in sidebar
+            const allItems = document.querySelectorAll('.report-item, .sub-report-item');
+            allItems.forEach(item => item.classList.remove('active'));
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+            
+            // Create or update iframe content
+            let iframeContent = document.getElementById('iframe-content');
+            
+            let reportName = reportTitle || filename.replace('.html', '');
+            
+            iframeContent.innerHTML = `
+                <div class="iframe-container" style="padding: 10px;">
+                    <iframe src="${filename}" title="${reportName}" onload="adjustIframeContent(this)"></iframe>
+                </div>
+            `;
+            iframeContent.classList.add('active');
+            
+            // Update header
+            document.querySelector('.content-title').textContent = reportName;
+            document.querySelector('.content-subtitle').textContent = '';
+            
+            // Show search functionality for all reports
+            const searchSpan = document.querySelector('.content-header span[onclick="toggleMainSearch()"]');
+            const searchArrow = document.getElementById('searchToggleArrow');
+            
+            if (searchSpan) searchSpan.style.display = 'inline';
+            if (searchArrow) searchArrow.style.display = 'inline';
+            
+            // Show print button
+            const printBtn = document.querySelector('.print-btn');
+            if (printBtn) {
+                printBtn.style.display = 'inline-block';
+            }
+        }
+
+
+        function printReport() {
+            const iframe = document.querySelector('#iframe-content iframe');
+                if (iframe) {
+                        iframe.contentWindow.print();
+            }
+        }
+
+        function showFilters() {
+            // Placeholder for filter functionality
+            alert('Filter functionality will be implemented based on specific requirements.');
+            
+            // For example, you could:
+            // 1. Send the filters to a backend API
+            // 2. Filter the iframe content based on the criteria
+            // 3. Reload the report with new parameters
+        }
+
+        // Function to adjust iframe content for better display
+        function adjustIframeContent(iframe) {
+            try {
+                // Wait a moment for the iframe to fully load
+                setTimeout(() => {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    if (iframeDoc) {
+                        // Add some styling to improve display
+                        const style = iframeDoc.createElement('style');
+                        style.textContent = `
+                            body { 
+                                margin: 20px !important; 
+                                padding: 20px !important;
+                                background: white !important;
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+                            }
+                            table { 
+                                margin: 0 auto !important;
+                                border-collapse: collapse !important;
+                            }
+                        `;
+                        iframeDoc.head.appendChild(style);
+                    }
+                }, 100);
+            } catch (e) {
+                // Cross-origin restrictions may prevent this, which is fine
+                console.log('Cannot access iframe content due to cross-origin restrictions');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Request Form</title>
+    <style>
+        .xBold{font-family:Arial;font-size:16px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold3{font-family:'Times New Roman';font-size:20px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xBold2{font-family:Arial;font-size:12px;color:#000000;text-decoration:none;font-weight:bold;white-space:nowrap;vertical-align:middle;}
+        .xNormal{font-family:Arial;font-size:11px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xNormal2{font-family:'Times New Roman';font-size:14px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .xSmall2{font-family:'Times New Roman';font-size:12px;color:#000000;text-decoration:none;font-weight:normal;white-space:wrap;vertical-align:middle;}
+        .printout2{FONT-WEIGHT:bold;FONT-SIZE:8px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        .printout{FONT-SIZE:12px;COLOR:#000000;font-family:Arial;TEXT-DECORATION:none}
+        @page{size: A4; margin-top:0.25in;margin-bottom:0.25in;margin-right:0.25in;margin-left:0.25in;mso-header-margin:.51in;mso-footer-margin:.51in;}
+    </style>
+</head>
+<body style="margin: 0; padding: 20px; background-color: white; display: flex; justify-content: center; min-height: 100vh;">
+<div style="padding: 20px;">
+<table border="0" width="600" cellpadding="0" cellspacing="0" style="border-collapse: collapse; background-color: white;">
+<tr>
+<td>
+    <!-- Header Section -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; background-color: white;">
+        <tr>
+            <td style="width: 100%; text-align: center; vertical-align: middle; padding: 10px; position: relative;">
+                <div style="text-align: center;">
+                    <img src="logo.png" alt="asturi" style="height: 40px; width: auto;">
+                </div>
+                <div style="position: absolute; top: 10px; right: 10px; text-align: left;">
+                    <div class="xNormal" style="margin-bottom: 5px;">Ref : AST/FIN/2025__/PR___</div>
+                    <div class="xNormal">Date : ___________</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100%; text-align: center; vertical-align: middle; padding: 20px; position: relative;">
+                <div style="position: absolute; top: 10px; right: 10px;">
+                    <div style="border: 2px solid #000; border-radius: 50%; width: 100px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                        <span class="xBold3">PR00</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100%; text-align: center; vertical-align: middle; padding: 10px;">
+                <div style="text-align: center;">
+                    <span class="xBold" style="text-decoration: underline; font-size: 18px;">PAYMENT REQUEST</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Spacing before form -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; background-color: white;">
+        <tr>
+            <td style="height: 20px;">&nbsp;</td>
+        </tr>
+    </table>
+
+    <!-- Form Fields -->
+    <table style="width: 100%; border-collapse: collapse; background-color: white;" cellpadding="8" cellspacing="0">
+        
+        <!-- Payment to -->
+        <tr style="height: 40px;">
+            <td style="width: 20%; padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Payment to</span>
+            </td>
+            <td style="width: 5%; padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">:</span>
+            </td>
+            <td style="width: 75%; padding: 8px; vertical-align: middle; border-bottom: 1px solid #000;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- PIC & HP No -->
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">PIC & HP No.</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">:</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; border-bottom: 1px solid #000;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Invoice/Ref No -->
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Invoice/ Ref No:</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal"></span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; border-bottom: 1px solid #000;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Purpose -->
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Purpose</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">:</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; border-bottom: 1px solid #000;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Additional Purpose Line -->
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal"></span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; border-bottom: 1px solid #000;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Amount -->
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Amount</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">:</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle; border-bottom: 1px solid #000;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Spacing -->
+        <tr style="height: 30px;">
+            <td colspan="3" style="padding: 8px;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Details claim -->
+        <tr style="height: 30px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal" style="text-decoration: underline;">Details claim</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">:</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- As per attachment -->
+        <tr style="height: 30px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">As per attachment.</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Large Spacing -->
+        <tr style="height: 80px;">
+            <td colspan="3" style="padding: 8px;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Signature Section -->
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle; width: 50%;">
+                <span class="xNormal">Requestor signature:</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Decision by MD :</span>
+            </td>
+        </tr>
+        
+        <!-- Spacing for signatures -->
+        <tr style="height: 60px;">
+            <td colspan="3" style="padding: 8px;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <!-- Name and Date Section -->
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Name:</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+        </tr>
+        
+        <tr style="height: 40px;">
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Date :</span>
+            </td>
+            <td style="padding: 8px; text-align: center; vertical-align: middle;">
+                <span class="xNormal">&nbsp;</span>
+            </td>
+            <td style="padding: 8px; vertical-align: middle;">
+                <span class="xNormal">Date :</span>
+            </td>
+        </tr>
+        
+    </table>
+
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

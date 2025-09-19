@@ -1,0 +1,72 @@
+/* MINIMAL CSS - OPTIMIZED FOR EMBEDDED REPORTS */
+
+/* Remove any fixed positioning since reports are now embedded */
+/* Focus on making reports look good within the main interface */
+
+/* Basic report styling enhancements */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Enhanced table styling for better readability */
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* Improve text readability */
+.xBold, .xBold2, .xBold3 {
+    font-weight: 600 !important;
+}
+
+.xNormal, .xNormal2, .xSmall2 {
+    line-height: 1.4 !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 12px !important;
+    }
+    
+    .xBold, .xBold2, .xBold3 {
+        font-size: 14px !important;
+    }
+}
+
+/* Print optimizations */
+@media print {
+    body {
+        background-color: white !important;
+    }
+    
+    table {
+        page-break-inside: avoid;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+    }
+}
+
+/* Smooth transitions for better UX */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Remove any unwanted margins from the report content */
+div[style*="padding: 20px"] {
+    padding: 10px !important;
+}
+
+/* Ensure proper spacing for embedded content */
+.report-container {
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+}
